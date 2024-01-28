@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corfu Travel 🌴✈️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        nav {
+            background-color: #2980b9;
+            padding: 10px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        section li {
+            margin: 10px 0;
+            cursor: pointer;
+            position: relative;
+        }
+
+        section .place-image {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .place-image {
+                display: none;
+            }
+
+            .show-image .place-image {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Corfu Travel 🌴✈️</h1>
+        </header>
+
+        <nav>
+            <a href="#about">About ℹ️</a>
+            <a href="#places">Places 🗺️</a>
+            <a href="#activities">Activities ⛵</a>
+            <a href="#accommodation">Accommodation 🏨</a>
+            <a href="#contact">Contact 📧</a>
+        </nav>
+
+        <section id="about">
+            <h2>About Corfu 🏝️</h2>
+            <p>Discover the beauty of Corfu, a Greek island with rich history, stunning landscapes, and vibrant culture.</p>
+        </section>
+
+        <section id="places">
+            <h2>Places to Visit 🏰</h2>
+            <ul>
+                <li class="show-image">
+                    Corfu Town 🏛️
+                    <div class="place-image"><img src="https://placeholder.com/600x400" alt="Corfu Town"></div>
+                </li>
+                <li class="show-image">
+                    Paleokastritsa Monastery ⛪
+                    <div class="place-image"><img src="https://placeholder.com/600x400" alt="Paleokastritsa Monastery"></div>
+                </li>
+                <li class="show-image">
+                    Achilleion Palace 🏰
+                    <div class="place-image"><img src="https://placeholder.com/600x400" alt="Achilleion Palace"></div>
+                </li>
+                <!-- Add more places with images here 🌍 -->
+            </ul>
+        </section>
+
+        <section id="activities">
+            <h2>Activities 🌊</h2>
+            <p>Relax on beautiful beaches, immerse yourself in history, savor local cuisine, and enjoy water sports.</p>
+        </section>
+
+        <section id="map">
+            <h2>Corfu Map 🗺️</h2>
+            <img src="https://placeholder.com/600x400" alt="Corfu Map">
+        </section>
+
+        <section id="accommodation">
+            <h2>Accommodation 🏨</h2>
+            <h3>Recommended Hotel 🌟</h3>
+            <p>Enjoy your stay at our recommended hotel in Corfu:</p>
+            <p><strong>Hotel Example</strong></p>
+            <p>Address: 123 Main Street, Corfu Town</p>
+            <img src="https://placeholder.com/600x400" alt="Hotel Example Image">
+        </section>
+
+        <section id="contact">
+            <h2>Contact 📞</h2>
+            <p>For inquiries, email us at <a href="mailto:info@corfutravel.com">info@corfutravel.com</a>.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Corfu Travel</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add touch event handling for mobile devices
+        document.addEventListener("DOMContentLoaded", function () {
+            var places = document.querySelectorAll(".show-image");
+            places.forEach(function (place) {
+                place.addEventListener("touchstart", function () {
+                    this.classList.toggle("show-image");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
